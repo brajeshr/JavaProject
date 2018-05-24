@@ -1,0 +1,21 @@
+<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.archetypes/jersey-quickstart-webapp -->
+<dependency>
+    <groupId>org.glassfish.jersey.archetypes</groupId>
+    <artifactId>jersey-quickstart-webapp</artifactId>
+    <version>2.27</version>
+</dependency>
+
+I tried to change in json formate but i got below error
+SEVERE: MessageBodyWriter not found for media type=application/json
+
+Solutions: if you want json formate need to add below dependency in pom.xml
+
+<dependency>
+    <groupId>org.glassfish.jersey.media</groupId>
+    <artifactId>jersey-media-moxy</artifactId>
+</dependency>
+
+
+solution link:
+
+https://stackoverflow.com/questions/29136404/severe-messagebodywriter-not-found-for-media-type-application-json-type-class/29136934?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
